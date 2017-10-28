@@ -42,7 +42,8 @@ h1 em {
     margin: auto;
     margin-top: 0px;
     margin-left: 15px;
-    padding-top: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     background-color: #5154c3;
     border: 2px solid #5154c3;
     color: #fff;
