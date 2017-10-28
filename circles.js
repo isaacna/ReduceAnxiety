@@ -29,7 +29,7 @@ function centerCircle(ctx, i){
     //ctx.fillStyle = "#FF0033";
     //ctx.fill();
 }
-
+//asdf
 window.onload=function(){
     function animate() {
         var c=document.getElementById("circCanvas");
