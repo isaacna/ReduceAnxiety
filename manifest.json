@@ -16,7 +16,7 @@
      "content_scripts": [
     {
       "matches": ["http://www.google.com/*"],
-      "js": ["popup.js"],
+      "js": ["popup.js", "calm.js"],
       "all_frames": true
     }
   ]
