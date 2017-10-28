@@ -1,0 +1,60 @@
+body {
+	margin:0;
+	padding: 0;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28c9b6+0,e5d57b+100 */
+	background: #28c9b6; /* Old browsers */
+	background: -moz-linear-gradient(top, #28c9b6 0%, #e5d57b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #28c9b6 0%,#e5d57b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #28c9b6 0%,#e5d57b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28c9b6', endColorstr='#e5d57b',GradientType=0 ); /* IE6-9 */
+}
+
+form {
+	width: 200px; 
+	height: 220px; 
+	
+}
+
+h1{
+	box-sizing: border-box;
+	padding: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    line-height: 45px;
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h1 em {
+	line-height: 1.5;
+	font-style: normal;
+}
+
+.button {
+	width: 80%;
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 15px;
+    padding-top: 12px;
+    background-color: #5154c3;
+    border: 2px solid #5154c3;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+	background-color: #fff;
+	border: 2px solid #5164c3;
+	color: #5164c3;
+}
