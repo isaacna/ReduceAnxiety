@@ -1,10 +1,12 @@
 //create function to store number of presses in an hour (in an array)
-function store(rating) {
+function store(r) {
   var d = new Date();
   console.log(d.getDate());
 
+  var x = 69;
+
   //var new_event = {date: d, rating: rating};
-  var new_event = {date : d, rating : rating};
+  var new_event = {date : String(d), rating : r};//must convert date to string because chrome storage only stores primitives
 
   console.log(new_event);
   //increment day in array
@@ -17,12 +19,17 @@ function store(rating) {
       var stress_events = result.stress_events;
       console.log("Existing:");
       for(var i = 0; i <stress_events.length; ++i) {//old
-        console.log(stress_events[i].date + " " + stress_events[i].rating);
+        var tempDate = new Date(stress_events[i].date);
+        console.log(tempDate.getDay());
+        console.log(stress_events[i].rating);
       }
 
       stress_events.push(new_event);
       for(var i = 0; i <stress_events.length; ++i) {// new
-        console.log(stress_events[i].date + " " + stress_events[i].rating);
+        var tempDate = stress_events[i].date;
+        var tempDate = new Date(stress_events[i].date);
+        console.log(tempDate.getDay());
+        console.log(stress_events[i].rating);
       }
 
       //console.log("New " + stress_events);
