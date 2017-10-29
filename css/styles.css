@@ -19,15 +19,16 @@ body {
 	/*padding-left: 30%;
 	padding-right: 30%;*/
 }
+
 #header {
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 	background-color: #6F6C87;
 	margin:auto;
 	padding-top: 100px;	
 }
 
-#header .imagesContainer {
+/*#header .imagesContainer {
 	margin-left: 40%;
     width: 500px;
     height: 500px;
@@ -38,12 +39,62 @@ body {
     background-repeat: no-repeat;
     background-clip: border-box;
     background-size: 90px;
+}*/
+
+#header .imagesContainer {
+	width: 500px;
+	height: 500px;
+	margin: 0;
+	position: absolute;
+	top: 510px;
+	left: 40.2%;
+	text-align: center;
+}
+
+#header .imagesContainer p {
+	animation: 1.5s opacity;
+	-webkit-transition: 1.5s opacity;
+}
+
+#header .imagesContainer .in {
+	animation-name: fadeIn;
+    animation-duration: 10s; 
+    animation-iteration-count: infinite;
+}
+
+#header .imagesContainer .out {
+	animation-name: fade;
+	animation-delay: 5s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+	position: relative;
+	top: -50px;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 
+
+#header #circCanvas {
+	margin-left: 15%;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: #fd7C87;
+}
+
 #header .info {
 	color:white;
-	width: 19%;
+	width: 260px;
 	height: 100%;
 	font-size: 25px; 
 	margin-left: 100px;
@@ -151,7 +202,7 @@ body {
 
 #middle .info {
 	color:white;
-	width: 19%;
+	width: 260px;
 	height: 100%;
 	font-size: 25px; 
 	margin-left: 100px;
@@ -213,49 +264,10 @@ body {
 }
 
 #middle #input_form {
-	display: inline-block;
+	margin-left: 24%;
+	box-sizing: border-box;
 	width: 50%;
 	height: 80%;
-}
-
-/*
-
-
-#middle .stressLevel input {
-	width: 100px;
-	box-sizing: border-box;
-    border-radius: 20px;
-    margin: auto;
-    /*margin-left: 45%;*/
-    /*padding-top: 6px;
-    padding-bottom: 6px;
-    background-color: #5154c3;
-    border: 2px solid #5154c3;
-    color: #fff;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 200;
-    text-decoration: none;
-    text-align: center;*/
-}
-
-/*#middle .stressLevel input:hover {
-	background-color: #fff;
-	border: 2px solid #5164c3;
-	font-weight: 400;
-	color: #000;
-}
-
-#middle .stressLevel form input {
-	size: 100px;
-	width: 100%;
-	height: 100%;
-	margin-left: 25%;
-}*/
-
-#middle #input_form {
-	margin-left: 30%;
-	box-sizing: border-box;
 }
 
 #middle form {
@@ -267,22 +279,41 @@ body {
 	font-size: 18px;
 }
 
-#middle form span {
-	box-sizing: border-box;
+
+#middle form span { 
+	position: relative;
+	left: -13px;
+	top: 20px;
+	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
 	font-size: 15px;
-	width: 10%;
-	height: 100px;
-	padding: 20px;
-	float: left;
 	text-align: center;
-	color: #fff;
 }
 
-#middle form span input{
-	margin-bottom: 18px;
+#middle #hitEnter {
+	margin-left: 3%;
+	box-sizing: border-box;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #8D9987;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    text-align: center;
+}
 
+#middle #hitEnter:hover {
+	background-color: #fff;
+	border: 2px solid #8D9987;
+	font-weight: 400;
+	color: #8D9987;
 }
 
   input[type='radio']:after {
@@ -292,11 +323,11 @@ body {
         top: -2px;
         left: -3px;
         position: relative;
-        background-color: #d1d3d1;
+        background-color: #8D9987;
         content: '';
         display: inline-block;
         visibility: visible;
-        border: 2px solid white;
+        border: 1px solid white;
     }
 
     input[type='radio']:checked:after {
@@ -310,11 +341,27 @@ body {
         content: '';
         display: inline-block;
         visibility: visible;
-        border: 2px solid white;
+        border: 1px solid white;
+    }
+
+    input {
+    	margin-left: 5.5%;
+    }
+
+    #input_form h1{
+    	margin-left: 3%;
+    	color: white;
+    	font-family: 'Open Sans', sans-serif;
+    	font-weight: 100;
+    	font-size: 16px;
+    	margin-bottom: 80px;
+    	margin-top: 145px;
     }
 
  #input_form .progress {
- 	margin-top: 155px;
+ 	position: relative;
+ 	top: -100px;
+ 	margin-top: 13px;
  	margin-left: 3%;
  	box-sizing: border-box;
  	padding: 5px;
@@ -334,11 +381,11 @@ body {
   width: 5%;
 }
 
-#stress1:checked span ~ .progress > .progress-bar {
+#stress1:checked ~ .progress > .progress-bar {
   width: 10%;
   background-color: #fd7C87;
 }
-#stress2:checked span ~ .progress > .progress-bar {
+#stress2:checked ~ .progress > .progress-bar {
   width: 20%;
   background-color: #fd7C87;
 }
@@ -377,7 +424,7 @@ body {
 
 #bottom {
 	width: 100%;
-	height: 700px;
+	height: 1200px;
 	background-color: #D1AA5D;
 	margin:auto;
 	padding-top: 100px;	
@@ -422,8 +469,8 @@ body {
 
 #bottom .info {
 	color:white;
-	width: 19%;
-	height: 100%;
+	width: 260px;
+	height: 500px;
 	font-size: 25px; 
 	margin-left: 100px;
 	float: left;
@@ -482,3 +529,190 @@ body {
 	font-weight: 400;
 	color: #D1AA5D;
 }
+
+#bottom #charts {
+	margin-top: 110px;
+	margin-left: 7%;
+}
+
+#bottom #charts h1 {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+#bottom .hourContainer {
+	font-weight: 100;
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: #D1AA5D;
+	float: left;
+	width: 54%;
+	margin-top: 45px;
+	margin-right: 50px;
+	margin-left: 11%;
+	margin-bottom: 100px;
+	height: 350px;
+}
+
+#bottom .dayContainer {
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: #D1AA5D;
+	float: left;
+	width: 40%;
+	margin-top: 20px;
+	margin-right: 0px;
+	height: 250px;
+}
+
+#bottom .avgContainer {
+	display: inline-block;
+	box-sizing: border-box;
+	background-color: #D1AA5D;
+	float: left;
+	width: 40%;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-left: 80px;
+	height: 250px;
+}
+
+#final {
+	width: 100%;
+	height: 1000px;
+	background-color: #848079;
+	margin:auto;
+	padding-top: 100px;	
+}
+
+#final .imagesContainer {
+	margin-left: 40%;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: #fd7C87;
+    background-image: url(../images/circle.svg);
+    background-position: center;
+    background-clip: border-box;
+    background-size: 790px;
+}
+
+#final .imagesContainer h1 {
+	color:white;
+	width: 100%;
+	height: 100%;
+	font-size: 60px; 
+	letter-spacing: 2px;
+	margin:auto;
+	float: left;
+	margin-top: 32%;
+	text-align: center;
+	
+}
+
+#final .imagesContainer h1 *{
+	color:white;
+	width: 100%;
+	height: 100%;
+	font-size: 60px; 
+	letter-spacing: 2px;
+	margin:auto;
+	float: left;
+	text-align: center;
+	font-style: normal;
+}
+
+#final .info {
+	color:white;
+	width: 260px;
+	height: 500px;
+	font-size: 25px; 
+	margin-left: 100px;
+	float: left;
+	text-align: left;
+}
+
+#final h1{
+	width: 100%;
+	font-size: 25px; 
+	font-weight: 400;
+	float: left;
+}
+
+#final h1 *{
+	width: 100%;
+	font-size: 60px; 
+	letter-spacing: 2px;
+	font-style: normal;
+	border-bottom: 1px;
+    border-bottom: solid #fff;
+    line-height: 1;
+}
+
+#final p {
+	margin-top: 30px;
+	display: inline-block;
+	font-size: 15px; 
+	line-height: 1.7rem;
+	font-family: 'Open Sans', sans-serif;
+	color:white;
+	width: 100%;
+	font-weight: 100;
+}
+
+#final a {
+	font-size: 15px; 
+	line-height: 1.7rem;
+	font-family: 'Open Sans', sans-serif;
+	color: lightblue;
+	width: 100%;
+	font-weight: 100;
+	font-style: italic;
+	text-decoration: none;
+}
+
+#final a:hover {
+	color: white;
+}
+
+#final .jump {	
+	margin-top: 80px;
+	box-sizing: border-box;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #848079;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    text-align: center;
+}
+
+#final .jump:hover {
+	background-color: #fff;
+	border: 2px solid #848079;
+	font-weight: 400;
+	color: #848079;
+}
+
+#final h2 {
+	margin-top: 40px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px; 
+	font-weight: 400;
+}
+
+
+
+
+
+

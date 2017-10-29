@@ -4,17 +4,14 @@ function colorCalc(i){
     var blues = 0xB0;
     var rede = 0xE3;
     var greene = 0xD5;
-    var bluee = 0x7B;
+    var blue = 0x7B;
     var weight =(i-59)/30;
     weight = .01*Math.round(weight*100);
     var r = Math.round((reds*weight + rede*(1-weight))/2);
-    var g = Math.round((blues*weight + bluee*(1-weight))/2);
+    var g = Math.round((blues*weight + blue*(1-weight))/2);
     var b = Math.round((greens*weight + greene*(1-weight))/2);
     var s = 'rgb(' + r.toString(16) +','+ g.toString(16) + ','+b.toString(16)+')';
-    console.log(weight);
-    console.log(s);
     return s;
-    
 }
 
 function topCircle(ctx, i, col){
@@ -38,15 +35,14 @@ function leftCircle(ctx, i, col){
 function rightCircle(ctx, i, col){
     ctx.beginPath();
     ctx.arc(150-40+i*.9, 150, i-40, 0, 2 * Math.PI, true);
+    ctx.color = col;
     ctx.stroke();
 }
 
 function centerCircle(ctx, i, col){
     ctx.beginPath();
     ctx.arc(150, 150, 2*(i-40), 0, 2 * Math.PI, true);
-    //ctx.stroke();
     ctx.fillStyle = col;
-    ctx.fill();
 }
 
 window.onload=function(){
@@ -61,11 +57,10 @@ window.onload=function(){
         ctx.rotate(2*Math.PI*(30/(30-i)));
         ctx.translate(-150, -150);
         
-        var col = colorCalc(i);
+        // var col = colorCalc(i);
+        var col = 0x8D9887;
         
-        //console.log(col);
-        //console.log(i);
-        
+
         centerCircle(ctx, i, col);
         leftCircle(ctx, i, col);
         rightCircle(ctx, i, col);

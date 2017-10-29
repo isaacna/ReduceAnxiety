@@ -2,16 +2,16 @@ body {
 	margin:0;
 	padding: 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28c9b6+0,e5d57b+100 */
-	background: #28c9b6; /* Old browsers */
-	background: -moz-linear-gradient(top, #28c9b6 0%, #e5d57b 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #28c9b6 0%,#e5d57b 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #28c9b6 0%,#e5d57b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: #6F6C87; /* Old browsers */
+	background: -moz-linear-gradient(top, #6F6C87 0%, #6A9987 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #6F6C87 0%, #6A9987 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #6F6C87 0%, #6A9987 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28c9b6', endColorstr='#e5d57b',GradientType=0 ); /* IE6-9 */
 }
 
 form {
 	width: 200px; 
-	height: 220px; 
+	height: 160px; 
 	
 }
 
@@ -38,11 +38,12 @@ h1 em {
     display: inline-block;
     height: 50px;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 20px;
     margin: auto;
     margin-top: 0px;
     margin-left: 15px;
-    padding-top: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: #5154c3;
     border: 2px solid #5154c3;
     color: #fff;

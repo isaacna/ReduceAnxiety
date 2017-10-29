@@ -1,3 +1,8 @@
+Chart.defaults.global.defaultColor = 'white';
+Chart.defaults.global.defaultFontColor = 'white';
+Chart.defaults.global.defaultFontFamily = "'Open Sans', san-serif";
+Chart.defaults.global.legend.display = false;
+
 
 function getHourData() {
   var hourData = [];//allocate hour array
@@ -26,8 +31,9 @@ function getHourData() {
             labels: hours,
             datasets: [{
               data: hourData,
-              label: "Uses"
-              // data: [3,5,6,2]
+              backgroundColor: 'white',
+              borderColor: 'white',
+              label: "Stress Events"
             }]
           };
 
@@ -57,13 +63,15 @@ function getDayData() {
 
         var ctx = document.getElementById("dayChart");
 
-        var days = ["S", "M", "T", "W", "T", "F", "S"];
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         var formattedDayData = {
             labels: days,
             datasets: [{
+              backgroundColor: 'white',
+              borderColor: 'white',
               data: dayData,
-              label: "Uses"
+              label: "Stress Events"
               // data: [3,5,6,2]
             }]
           };
@@ -97,7 +105,11 @@ function getAveragePerDay() {
 
         var ctx = document.getElementById("avgChart");
 
+<<<<<<< HEAD
+        var days = ["Saturday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+=======
         var days = ["S", "M", "T", "W", "T", "F", "S"];
+>>>>>>> 56594e72ca69c6825de104eee49464114a27102a
 
         var avgData=[];//avg data array
         for(var i = 0; i < 7; ++i) {//initialize to 0
@@ -120,6 +132,11 @@ function getAveragePerDay() {
             labels: days,
             datasets: [{
               data: avgData,
+<<<<<<< HEAD
+              backgroundColor: 'white',
+              borderColor: 'white',
+=======
+>>>>>>> 56594e72ca69c6825de104eee49464114a27102a
               label: "Average Rating"
               // data: [3,5,6,2]
             }]
