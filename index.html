@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900" rel="stylesheet">
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+</head>
+<body>
+	<div id ="header">
+		<span class="info">
+			<h1>Step 1<br><em>Breathe</em></h1>
+			<p>
+				About 60% of panic attacks are accompanied by hyperventilation and many people suffering from anxiety over-breathe even when they think they are relaxed. Practicing calming breathing can be the fastest way to control your anxiety. 
+				<br><br>
+				Follow the breathing excersise to the right to stabilize your breathing.
+			</p><br><br>
+			<a class= "jump" href="#middleTag"> 
+				Feeling Calm, Next Step
+			</a>
+		</span>
+		
+		<div class="imagesContainer"> 
+		</div>
+	</div>
+	<a name="middleTag"></a>
+	<div id ="middle">
+		<span class="info">
+			<h1>Step 2<br><em>Record</em></h1>
+			<p>
+				Tracking your anxiety and stress levels consistently can help you to identify stressors. Anxiety Helper tracks the time and frequency of your stress events and provides visualizations to help understand the data. 
+				<br><br>
+				Enter your level of stress and keys stressors related to this incident. This data will show up whenever you use Anxiety Helper. 
+			</p><br><br>
+			<a class= "jump" href="#bottomTag"> 
+				Feeling Calm, Next Step
+			</a>
+		</span>
+		<div id ="input_form">
+	      	<form>
+	      		<div class="progress">
+   					 <div class="progress-bar"></div>
+ 				</div>
+		         <span><input type="radio" name="level" id="stress1" value=1><br>1</span>
+		         <span><input type="radio" name="level" id="stress2" value=2><br>2</span>
+		         <span><input type="radio" name="level" id="stress3" value=3><br>3</span>
+		         <span><input type="radio" name="level" id="stress4" value=4><br>4</span>
+		         <span><input type="radio" name="level" id="stress5" checked value=5><br>5</span>
+		         <span><input type="radio" name="level" id="stress6" value=6><br>6</span>
+		         <span><input type="radio" name="level" id="stress7" value=7><br>7</span>
+		         <span><input type="radio" name="level" id="stress8" value=8><br>8</span>
+		         <span><input type="radio" name="level" id="stress9" value=9><br>9</span>
+		         <span><input type="radio" name="level" id="stress10" value=10><br>10</span>
+		         <input type="submit" id="hitEnter"><br><br>
+		         <h1>level of stress</h1>
+	      	</form>
+    	</div>
+	</div>
+	<a name="bottomTag"></a>
+	<div id ="bottom">
+		<span class="info">
+			<h1>Step 3<br><em>Reflect</em></h1>
+			<p>
+				About 60% of panic attacks are accompanied by hyperventilation and many people suffering from anxiety over-breathe even when they think they are relaxed. Practicing calming breathing can be the fastest way to control your anxiety. 
+				<br><br>
+				Follow the breathing excersise to the right to stabilize your breathing.
+			</p><br><br>
+			<a class= "jump" href="#contact"> 
+				Feeling Calm, Next Step
+			</a>
+		</span>
+		
+		<div class="imagesContainer"></div>
+		<canvas id="hourChart" width="100" height="30"></canvas>
+  		<canvas id="dayChart" width="100" height="30"></canvas>
+	</div>
+	<script type="text/javascript" src="js/stats.js"></script>
+	<script type="text/javascript" src="js/calm.js"></script>
+</body>
+</html>

@@ -14,5 +14,5 @@ function store() {
 
 
 document.getElementById("myBtn").addEventListener("click", function() {
-  chrome.windows.create({"url": "calm.html"})
+  chrome.windows.create({"url": "../index.html"})
 });//document.getElementById("toggle").addEventListener("change", store());

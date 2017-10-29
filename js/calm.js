@@ -1,3 +1,5 @@
+console.log("JFJFJFJF");
+
 //create function to store number of presses in an hour (in an array)
 function store(r) {
   var d = new Date();
@@ -17,20 +19,20 @@ function store(r) {
       var stress_events = result.stress_events;
       //console.log("Existing:");
 
-      // for(var i = 0; i <stress_events.length; ++i) {//test printing out old
-      //   var tempDate = new Date(stress_events[i].date);
-      //   console.log(tempDate.getDay());
-      //   console.log(stress_events[i].rating);
-      // }
-      //
-      //console.log("Now:")
-      // stress_events.push(new_event);
-      // for(var i = 0; i <stress_events.length; ++i) {//test printing out new
-      //   var tempDate = stress_events[i].date;
-      //   var tempDate = new Date(stress_events[i].date);
-      //   console.log(tempDate.getDay());
-      //   console.log(stress_events[i].rating);
-      // }
+      for(var i = 0; i <stress_events.length; ++i) {//test printing out old
+        var tempDate = new Date(stress_events[i].date);
+        console.log(tempDate.getDay());
+        console.log(stress_events[i].rating);
+      }
+      
+      console.log("Now:")
+      stress_events.push(new_event);
+      for(var i = 0; i <stress_events.length; ++i) {//test printing out new
+        var tempDate = stress_events[i].date;
+        var tempDate = new Date(stress_events[i].date);
+        console.log(tempDate.getDay());
+        console.log(stress_events[i].rating);
+      }
 
 
       // set the new array value to the same key
