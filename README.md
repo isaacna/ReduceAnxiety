@@ -1,5 +1,5 @@
 # stress-less
-A chrome extension to help with anxiety and track trigger times and events
+A chrome extension to help with anxiety and track trigger times and events to display insightful data for the user. Made for ArchHacks 2017 by Isaac Na, Chauncey Hill, and Lucas Drummond.
 
 ## Instructions on Installation
 Clone or download the repository onto your local computer. Then make sure to point your chrome browser to 'chrome://extensions' and enter developer mode. Press Load Unpacked Extension and load the downloaded repository into chrome. Click on the icon in the upper right hand corner (that looks like a puzzle piece) and enter the extension.
