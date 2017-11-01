@@ -105,11 +105,7 @@ function getAveragePerDay() {
 
         var ctx = document.getElementById("avgChart");
 
-<<<<<<< HEAD
-        var days = ["Saturday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-=======
-        var days = ["S", "M", "T", "W", "T", "F", "S"];
->>>>>>> 56594e72ca69c6825de104eee49464114a27102a
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         var avgData=[];//avg data array
         for(var i = 0; i < 7; ++i) {//initialize to 0
@@ -132,13 +128,9 @@ function getAveragePerDay() {
             labels: days,
             datasets: [{
               data: avgData,
-<<<<<<< HEAD
               backgroundColor: 'white',
               borderColor: 'white',
-=======
->>>>>>> 56594e72ca69c6825de104eee49464114a27102a
               label: "Average Rating"
-              // data: [3,5,6,2]
             }]
           };
 
@@ -149,11 +141,73 @@ function getAveragePerDay() {
     });
 }
 
+function getTagCount() {
 
-//var ctx = $("#myChart");
+
+  chrome.storage.sync.get({stress_events: []}, function (result) {
+      // the input argument is ALWAYS an object containing the queried keys
+      var stress_events = result.stress_events;
+
+      var tagSet = new Set();
+
+      // set the new array value to the same key
+      for(var i = 0; i < result.stress_events.length; ++i) {
+
+        tagSet.add(result.stress_events[i].tag);
+
+      }
+        var counts = [];
+        for(var i = 0; i < tagSet.size; ++i){
+          counts[i]=0;
+        }
+
+// debugger;
+        let tagArray = Array.from(tagSet);
+        for(var i = 0; i < result.stress_events.length; ++i){
+          for(var j = 0; j< tagArray.length; ++j){
+            if(result.stress_events[i].tag==tagArray[j]) {
+              counts[j]++;
+            }
+          }
+        }
+
+        var ctx = document.getElementById("tagChart");
+        console.log(tagArray);
+        console.log(counts);
+
+        var formattedTagData = {
+            labels: tagArray,
+            datasets: [{
+              data: counts,
+              backgroundColor: 'white',
+              borderColor: 'white',
+              label: "Tag Counts"
+            }]
+          };
+
+        var tagChart = new Chart(ctx,{
+            type: 'bar',
+            data: formattedTagData,
+            options: {
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+
+                    stacked: true
+
+                }]
+            }
+            }
+        });
+    });
+}
+
 
 $(function() {
   getHourData();
   getDayData();
   getAveragePerDay();
+  getTagCount();
 });

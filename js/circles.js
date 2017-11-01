@@ -79,16 +79,26 @@ window.onload=function(){
         if(i <= 60){
             extra = 1;
             shrink = false;
+            document.getElementById("some1").innerHTML = '<p class="in" ></p><br>';
+
         }
         else if (i >= 90){
             extra = 1.5;
             shrink = true;
+            document.getElementById("some1").innerHTML = '<p class="in" ></p><br>';
+        }
+        if(i == 62 && !shrink){
+            document.getElementById("some1").innerHTML = '<p class="in" >inhale..</p><br>';
+        }
+        if(i == 89 && shrink){
+            document.getElementById("some1").innerHTML = '<p class="in" >and exhale..</p><br>';
         }
         ctx.restore();
         setTimeout(animate, 75 + 1000*extra);
+        
         
     }
     var i = 60;
     var shrink = false;
     animate();
-}//]]>  
+}//]]>
